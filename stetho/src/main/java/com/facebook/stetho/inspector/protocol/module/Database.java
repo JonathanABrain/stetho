@@ -51,13 +51,13 @@ public class Database implements ChromeDevtoolsDomain {
    * Note that when this limit is exceeded, a dummy row will be introduced that indicates
    * truncation occurred.
    */
-  private static final int MAX_EXECUTE_RESULTS = 250;
+  private static final int MAX_EXECUTE_RESULTS = 30000;
 
   /**
    * Maximum length of a BLOB field before we stop trying to interpret it and just
    * return {@link #UNKNOWN_BLOB_LABEL}
    */
-  private static final int MAX_BLOB_LENGTH = 512;
+  private static final int MAX_BLOB_LENGTH = 16384;
 
   /**
    * Label to use when a BLOB column cannot be converted to a string.
